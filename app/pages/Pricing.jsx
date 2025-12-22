@@ -5,7 +5,7 @@ export default function Pricing() {
   return (
     <section className="w-full bg-[#010101] px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1200px] mx-auto py-16">
-        {/* Heading */}
+        
         <div className="max-w-[780px] mx-auto text-center mb-12">
           <h1
             className="font-bold text-white
@@ -24,7 +24,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Toggle */}
+        
         <div className="flex justify-center mb-12">
           <div className="flex bg-[#FFFFFF1A] border border-white rounded-full p-1">
             <button className="px-6 py-1 rounded-full bg-[#FFFFFF33] text-white text-sm">
@@ -34,14 +34,13 @@ export default function Pricing() {
           </div>
         </div>
 
-        {/* Pricing Cards */}
         <div
           className="grid gap-8
           grid-cols-1
           md:grid-cols-2
           lg:grid-cols-3"
         >
-          {/* FREE */}
+        
           <PricingCard
             title="Free"
             price="$0"
@@ -55,7 +54,7 @@ export default function Pricing() {
             tick="/tick.png"
           />
 
-          {/* PRO (Highlighted) */}
+          
           <div
             className="p-[3px] rounded-[20px]
             bg-gradient-to-b from-[#FF7044] to-[#641800]"
@@ -78,7 +77,7 @@ export default function Pricing() {
             />
           </div>
 
-          {/* TEAM */}
+         
           <PricingCard
             title="Team"
             price="$37"
@@ -98,7 +97,6 @@ export default function Pricing() {
   );
 }
 
-/* ---------------- CARD COMPONENT ---------------- */
 
 function PricingCard({ title, price, desc, features, tick, badge }) {
   return (

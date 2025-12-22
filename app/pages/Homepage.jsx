@@ -134,7 +134,6 @@ export default function Homepage() {
           </div>
         </div>
 
-        {/* ================= STATS ================= */}
         <div
           className="mt-16 border-y border-[#FFFFFF1A]
           bg-gradient-to-b from-transparent to-black"
