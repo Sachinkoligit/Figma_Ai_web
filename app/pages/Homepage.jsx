@@ -12,7 +12,7 @@ import { Menu, X } from "lucide-react";
 export default function Homepage() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="w-full bg-[#010101] relative overflow-x-hidden">
+    <div className="w-full bg-[#010101] relative">
       <div className="flex w-full">
         <div
           className="relative w-full min-h-[60vh] lg:min-h-[755px]
@@ -57,9 +57,9 @@ export default function Homepage() {
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          {/* Mobile Menu */}
+         
           {open && (
-            <div className="absolute top-[70px] left-0 w-[50%] bg-black flex flex-col items-center gap-6 py-6 text-white text-[18px] md:hidden translate-x-[100%]">
+            <div className="absolute top-[70px] left-0 w-[50%] bg-black flex flex-col items-center gap-6 py-6 text-white text-[18px] md:hidden right-0">
               <span className="font-bold">Home</span>
               <span>Services</span>
               <span>Contact us</span>
@@ -116,7 +116,7 @@ export default function Homepage() {
             decisions—all from one intuitive dashboard.
           </p>
 
-          {/* BUTTONS */}
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <button
               className="bg-[#FF541F] rounded-[10px]

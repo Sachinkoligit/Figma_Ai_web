@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Stats() {
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8">
+    <section className="w-full px-4 bg-[#010101] sm:px-6 lg:px-8">
       <div className="max-w-[1245px] mx-auto pt-16 lg:pt-24">
         {/* Heading */}
         <div className="flex justify-center">
