@@ -1,77 +1,227 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Faq() {
   return (
-    <div className="w-full bg-[#010101] pt-[100px]  px-4  md:px-6  lg:px-8">
-      <div className="max-w-[891px] w-full mx-auto  flex flex-col gap-[20px] md:gap-[50px] lg:gap-[76px]">
-        <div className="max-w-[830px] w-full mx-auto">
-          <h1 className="max-w-[555px] w-full font-bold text-4xl md:text-[64px] mx-auto text-white text-center">
+    <div className="relative w-full bg-[#010101] pt-[100px] px-4 md:px-0 overflow-hidden">
+      {/* BACKGROUND RECT */}
+      <div
+        className="
+  absolute z-0
+  w-[100px] h-[150px]
+  sm:w-[120px] sm:h-[200px]
+  md:w-[180px] md:h-[300px]
+  top-0 left-0
+  translate-y-16 sm:translate-y-24 md:translate-y-32
+  -translate-x-6 sm:-translate-x-12 md:-translate-x-22
+"
+      >
+        <Image
+          src="/rect.png"
+          alt="background"
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div
+        className="
+  absolute z-0
+  w-[100px] h-[130px]
+  sm:w-[180px] sm:h-[340px]
+  md:w-[223px] md:h-[426px]
+  top-0 right-0
+  translate-y-10 sm:translate-y-16 md:translate-y-20
+  translate-x-4 sm:translate-x-8 md:translate-x-16
+"
+      >
+        <Image
+          src="/Circle.png"
+          alt="background"
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div
+        className="absolute top-0 left-0 w-[40px] h-[130px] sm:w-[180px] sm:h-[200px]
+  md:w-[200px] md:h-[326px] z-0 translate-y-184"
+      >
+        <Image
+          src="/round_rect.png"
+          alt="background"
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="absolute top-0 left-0 w-[940px] h-[980px] z-0 right-0 translate-x-200 md:translate-y-100">
+        <Image
+          src="/ellipse.png"
+          alt="background"
+          fill
+          className="object-cover blur-[120px]"
+        />
+      </div>
+
+      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-150 translate-y-100 z-0 right-0">
+        <Image src="/line.png" alt="background" fill className="object-cover" />
+      </div>
+
+      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-190 translate-y-100 z-0 right-0">
+        <Image src="/line.png" alt="background" fill className="object-cover" />
+      </div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-[891px] w-full mx-auto flex lg:pb-30 flex-col gap-[20px] md:gap-[50px] lg:gap-[76px]">
+        <div className="max-w-[830px] w-full mx-auto text-center">
+          <h1 className="max-w-[555px] mx-auto font-bold text-4xl md:text-[64px] text-white">
             Frequently Asked Questions
           </h1>
-          <p className="w-full text-[#D9D9D9] pt-[20px] px-[23px] text-[20px] text-center">
+          <p className="mt-5 text-[#D9D9D9] text-[20px] px-5">
             Got questions? We've got answers. Find everything you need to know
             about using our platform, plans, and features.
           </p>
         </div>
 
+        {/* FAQ ITEMS */}
         <div className="w-full flex flex-col gap-[22.66px]">
-          <div className="w-full flex p-[23.85px] border-b">
-            <div className="w-[815px] mx-auto  flex flex-col gap-[10px]">
-              <h1 className="max-w-[275px] w-full text-[20px] text-white">
-                What is this platform used for?
+          {[
+            {
+              q: "What is this platform used for?",
+              a: "It’s an AI-powered design assistant that helps you generate, customize, and export creative assets in seconds—whether for personal projects, brand work, or commercial use.",
+            },
+            { q: "What happens if I hit my free generation limit?" },
+            { q: "Do I need design experience to use it?" },
+            { q: "Can I collaborate with my team?" },
+            { q: "Is it really free to use?" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="w-full items-start flex p-[23.85px] border-b border-[#ffffff1a]"
+            >
+              <div className="flex-1 flex flex-col gap-[10px]">
+                <h1 className="text-[20px] text-white">{item.q}</h1>
+                {item.a && (
+                  <p className="text-[#919191] text-[18px]">{item.a}</p>
+                )}
+              </div>
+              <Image src="/arrow-down.png" alt="down" width={30} height={30} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative max-w-[1180px] border rounded-[50px] border-[#ffffff30] mx-auto px-[23px] md:px-[181px] py-[56px] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/frame1.png"
+            alt="background"
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/cross.png"
+            alt="background"
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 w-full flex flex-col gap-[30px] text-center">
+          <span className="text-4xl md:text-[64px] font-bold text-white">
+            Ready to Design Smarter?
+          </span>
+
+          <p className="max-w-[618px] mx-auto text-[20px] text-[#FFFFFFCC]">
+            Whether you're a freelancer, a team, or a growing agency—our tools
+            adapt to your workflow. Design faster. Deliver better.
+          </p>
+
+          <div className="max-w-[211px] mx-auto bg-[#FF541F] px-[34px] py-[15px] rounded-[10px]">
+            <span className="text-white text-[20px] font-bold">
+              Get Started →
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full px-[23px] md:px-[101px] py-[66px] mt-[80px] bg-[#FFFFFF0F]">
+        <div className="max-w-[1237px] w-full mx-auto flex flex-col gap-[50px]">
+          <div className="w-full flex md:flex-row flex-col md:gap-0 gap-2 justify-between">
+            <div className="md:max-w-[307px] flex flex-col gap-[10px] w-full">
+              <h1 className="max-w-[133px] text-[32px] text-white w-full">
+                About Us
               </h1>
-              <p className="w-full text-[#919191] text-[18px]">
-                It’s an AI-powered design assistant that helps you generate,
-                customize, and export creative assets in seconds—whether for
-                personal projects, brand work, or commercial use.
+              <p className="w-full text-[18px] text-[#BCBCBC]">
+                We’re a team of designers, engineers, and innovators building AI
+                tools that empower anyone to turn imagination into stunning
+                visuals—faster, smarter, and effortlessly.
               </p>
             </div>
-            <div className="max-w-[28px]">
-              <Image src="/arrow-down.png" alt="down" height={28} width={28} />
+
+            <div className="md:max-w-[150px] w-full flex flex-col gap-[15px]">
+              <h1 className="text-[24px] font-bold text-[#FF541F]">
+                Useful Links
+              </h1>
+              <div className="flex flex-col gap-[8px] text-[#BCBCBC] text-[18px]">
+                <p>About</p>
+                <p>Services</p>
+                <p>Team</p>
+                <p>Prices</p>
+              </div>
+            </div>
+
+            <div className="md:max-w-[155px] w-full flex flex-col gap-[15px]">
+              <h1 className="text-[24px] font-bold text-[#FF541F]">Help</h1>
+              <div className="flex flex-col gap-[8px] text-[#BCBCBC] text-[18px]">
+                <p>Customer Support</p>
+                <p>Terms & Conditions</p>
+                <p>Privacy Policy</p>
+                <p>Contact us</p>
+              </div>
+            </div>
+
+            <div className="md:max-w-[195px] w-full flex flex-col gap-[15px]">
+              <h1 className="text-[24px] font-bold text-[#FF541F]">
+                Contact with us
+              </h1>
+              <div className="flex flex-col gap-[8px] text-[#BCBCBC] text-[18px]">
+                <p>27 Division St, New York,NY 10002, USA</p>
+                <p>+123 324 2653</p>
+                <p>username@mail.com</p>
+              </div>
             </div>
           </div>
 
-          <div className="w-full flex p-[23.85px] border-b">
-            <div className="w-[815px] mx-auto  flex flex-col gap-[10px]">
-              <h1 className=" w-full text-[20px] text-white">
-                What happens if I hit my free generation limit?
-              </h1>
-            </div>
-            <div className="max-w-[28px]">
-              <Image src="/arrow-down.png" alt="down" height={28} width={28} />
-            </div>
-          </div>
+          <div className="w-full p-[0.5px] bg-[#FF541F]"></div>
 
-          <div className="w-full flex p-[23.85px] border-b">
-            <div className="w-[815px] mx-auto  flex flex-col gap-[10px]">
-              <h1 className=" w-full text-[20px] text-white">
-                Do I need design experience to use it?
-              </h1>
-            </div>
-            <div className="max-w-[28px]">
-              <Image src="/arrow-down.png" alt="down" height={28} width={28} />
-            </div>
-          </div>
-
-          <div className="w-full flex p-[23.85px] border-b">
-            <div className="w-[815px] mx-auto  flex flex-col gap-[10px]">
-              <h1 className=" w-full text-[20px] text-white">
-                Can I collaborate with my team?
-              </h1>
-            </div>
-            <div className="max-w-[28px]">
-              <Image src="/arrow-down.png" alt="down" height={28} width={28} />
-            </div>
-          </div>
-
-          <div className="w-full flex p-[23.85px] border-b">
-            <div className="w-[815px] mx-auto  flex flex-col gap-[10px]">
-              <h1 className=" w-full text-[20px] text-white">
-                Is it really free to use?
-              </h1>
-            </div>
-            <div className="max-w-[28px]">
-              <Image src="/arrow-down.png" alt="down" height={28} width={28} />
+          <div className="w-full flex md:flex-row flex-col gap-2  justify-between items-center">
+            <h1 className="text-[18px] text-[#FFFFFF]">
+              © 2024 All Right Reserved.
+            </h1>
+            <div className="max-w-[145px] flex justify-between items-center">
+              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+                <Image src="/fb.png" width={13} height={13} alt="facebook" />
+              </div>
+              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+                <Image src="/git.png" width={18} height={18} alt="facebook" />
+              </div>
+              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+                <Image src="/twt.png" width={18} height={18} alt="facebook" />
+              </div>
+              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+                <Image
+                  src="/google.png"
+                  width={18}
+                  height={18}
+                  alt="facebook"
+                />
+              </div>
             </div>
           </div>
         </div>

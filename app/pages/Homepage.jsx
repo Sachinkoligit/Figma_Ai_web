@@ -43,11 +43,22 @@ export default function Homepage() {
         <div className="flex justify-between items-center max-w-[1200px] mx-auto px-4 mt-6">
           <Image src="/Logo.png" width={54} height={40} alt="logo" />
 
-          <div className="hidden md:flex gap-8 text-white text-[18px] lg:text-[22px]">
-            <span className="font-bold">Home</span>
-            <span>Services</span>
-            <span>Contact us</span>
-            <span>About us</span>
+          <div className="hidden md:flex gap-8 text-white [&_span]:cursor-pointer text-[18px] lg:text-[22px]">
+            <span
+              className="font-bold border-b-2 border-transparent hover:border-[#FF541F]
+ rounded-[1.5px] "
+            >
+              Home
+            </span>
+            <span className="border-b-2 border-transparent hover:border-[#FF541F]">
+              Services
+            </span>
+            <span className="border-b-2 border-transparent hover:border-[#FF541F]">
+              Contact us
+            </span>
+            <span className="border-b-2 border-transparent hover:border-[#FF541F]">
+              About us
+            </span>
           </div>
 
           <button
@@ -57,7 +68,6 @@ export default function Homepage() {
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-         
           {open && (
             <div className="absolute top-[70px] left-0 w-[50%] bg-black flex flex-col items-center gap-6 py-6 text-white text-[18px] md:hidden right-0">
               <span className="font-bold">Home</span>
@@ -86,7 +96,7 @@ export default function Homepage() {
             <div
               className="flex items-center gap-4 px-4 py-3
               rounded-full bg-gradient-to-r from-[#FF541F21] to-[#FF541F0A]
-              border border-slate-700"
+              border border-[#FFFFFF26]"
             >
               <Image src="/photos.png" width={140} height={40} alt="photos" />
               <div>
@@ -116,7 +126,6 @@ export default function Homepage() {
             decisions—all from one intuitive dashboard.
           </p>
 
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <button
               className="bg-[#FF541F] rounded-[10px]
@@ -135,24 +144,24 @@ export default function Homepage() {
         </div>
 
         <div
-          className="mt-16 border-y border-[#FFFFFF1A]
+          className="mt-16  border-[#FFFFFF1A]
           bg-gradient-to-b from-transparent to-black"
         >
           <div
-            className="max-w-[1200px] mx-auto py-10
+            className=" w-full mx-auto py-10 px-4
             flex flex-col md:flex-row justify-around items-center gap-8"
           >
-            <div className="text-center">
+            <div className="text-center mx-auto">
               <p className="text-[#FF541F] text-[20px]">Clients</p>
               <p className="text-white font-bold text-[36px]">120K+</p>
             </div>
 
-            <div className="text-center md:border-x md:px-12 border-[#FFFFFF1A]">
+            <div className="text-center md:border-x md:px-[100px] lg:px-[200px] mx-auto border-[#FFFFFF1A]">
               <p className="text-[#FF541F] text-[20px]">Projects</p>
               <p className="text-white font-bold text-[36px]">150+</p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center mx-auto">
               <p className="text-[#FF541F] text-[20px]">5-Star Reviews</p>
               <p className="text-white font-bold text-[36px]">32K+</p>
             </div>
@@ -163,7 +172,6 @@ export default function Homepage() {
         <Stats />
         <Pricing />
         <Faq />
-        <Footer />
       </div>
     </div>
   );
