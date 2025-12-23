@@ -78,7 +78,7 @@ export default function Pricing() {
           {/* PRO (Highlighted) */}
           <div className="p-[3px] rounded-[20px] bg-gradient-to-b from-[#FF7044] to-[#641800]">
             <PricingCard
-              title={<span className="text-[#FF541F]">Pro</span>}
+              title={<span className="text-[#FF541F] font-bold text-[30px]">Pro</span>}
               price="$17"
               styles="rounded-[20px] bg-[#1B1B1C] h-[533px] lg:h-[661px]"
               badge="-20%"
@@ -116,9 +116,6 @@ export default function Pricing() {
   );
 }
 
-/* =========================
-   Pricing Card Component
-========================= */
 
 function PricingCard({ title, price, desc, features, tick, badge, styles }) {
   return (
@@ -169,11 +166,11 @@ function PricingCard({ title, price, desc, features, tick, badge, styles }) {
       </div>
 
       {/* CTA */}
-      <div className="mx-auto relative inline-flex">
+      <div className="mx-auto relative inline-flex mt-12">
         {/* GLOW */}
         <div
           className="
-      absolute inset-[0px]
+      absolute inset-0
       rounded-[14px]
       bg-[#FF3D00]
       blur-[28px]
@@ -185,8 +182,10 @@ function PricingCard({ title, price, desc, features, tick, badge, styles }) {
         {/* BUTTON */}
         <button
           className="
-      relative z-10 flex items-center gap-3
-      px-6 py-3 border border-[#FFFFFF12]
+      relative z-10
+      flex items-center gap-3
+      px-6 py-3
+      border border-[#FFFFFF12]
       rounded-[14px]
       bg-[#2B140C]
       text-white text-[16px] font-medium

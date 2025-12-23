@@ -3,10 +3,10 @@ import React from "react";
 
 export default function Features() {
   return (
-    <div className="bg-[#010101] w-full py-12 px-4">
+    <div className="bg-[#010101] w-full py-12 font-sans">
       <div className="max-w-[1200px] mx-auto w-full">
         {/* ================= HEADER ================= */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           {/* LEFT CONTENT */}
           <div className="max-w-[690px] w-full flex flex-col gap-3">
             {/* H1 */}
@@ -14,7 +14,7 @@ export default function Features() {
               className="
         order-1
         text-white font-normal leading-tight
-        text-[36px] sm:text-[44px] md:text-[54px] lg:text-[64px]
+        text-[36px] max-w-[680px] w-full sm:text-[44px] md:text-[54px] font-sans lg:text-[64px]
       "
             >
               Designed for Designers. <br />
@@ -53,13 +53,15 @@ export default function Features() {
           </div>
 
           {/* IMAGE FOR DESKTOP */}
-          <div className="hidden md:block relative w-[250px] aspect-square">
-            <Image
-              src="/logo2.png"
-              alt="Features"
-              fill
-              className="object-contain"
-            />
+          <div className="flex w-[50%] justify-center">
+            <div className="hidden md:block relative w-[155px] h-[155px]">
+              <Image
+                src="/logo2.png"
+                alt="Features"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
 
@@ -80,7 +82,7 @@ export default function Features() {
                   seconds.
                 </p>
 
-                <Image src="/arrow.png" alt="arrow" height={80} width={80} />
+                <Image src="/arrow.png" alt="arrow" height={50} width={50.01} />
               </div>
 
               <h3
@@ -106,7 +108,7 @@ export default function Features() {
                   design.
                 </p>
 
-                <Image src="/arrow.png" alt="arrow" height={80} width={80} />
+                <Image src="/arrow.png" alt="arrow" height={50} width={50} />
               </div>
 
               <h3
@@ -135,7 +137,7 @@ export default function Features() {
                   mobile-optimized assets.
                 </p>
 
-                <Image src="/arrow.png" alt="arrow" height={80} width={80} />
+                <Image src="/arrow.png" alt="arrow" height={50} width={50} />
               </div>
 
               <h3
@@ -152,7 +154,7 @@ export default function Features() {
               bg-gradient-to-br from-transparent to-[#FF3C00]/30
               rounded-[20px] p-5"
             >
-              <div className="flex justify-between items-start gap-4">
+              <div className="flex justify-between items-start">
                 <p
                   className="text-[#D9D9D9D9]
                   text-[15px] sm:text-[16px] md:text-[18px] max-w-[327px] w-full"
@@ -161,7 +163,7 @@ export default function Features() {
                   With intuitive prompt-based editing.
                 </p>
 
-                <Image src="/arrow.png" alt="arrow" height={80} width={80} />
+                <Image src="/arrow.png" alt="arrow" height={50} width={50} />
               </div>
 
               <h3

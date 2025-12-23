@@ -6,27 +6,31 @@ import Features from "./Features";
 import Stats from "./Stats";
 import Pricing from "./Pricing";
 import Faq from "./Faq";
-import Footer from "./Footer";
 import { Menu, X } from "lucide-react";
 
 export default function Homepage() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="w-full bg-[#010101] relative">
+    <div className="w-full max-w-[1440px] mx-auto bg-[#010101] relative font-sans">
       <div className="flex w-full">
         <div
           className="relative w-full min-h-[60vh] lg:min-h-[755px]
           bg-[url('/left.png')] bg-cover bg-center bg-no-repeat"
-        >
-          <div
-            className="absolute inset-x-0 bottom-0 h-[150px]
-            bg-gradient-to-t from-black/80 to-transparent"
-          />
-        </div>
+        />
 
         <div
           className="w-full min-h-[60vh] lg:min-h-[755px]
           bg-[url('/right.png')] bg-cover bg-center bg-no-repeat"
+        />
+      </div>
+
+      <div className="absolute top-[-16px]  h-[812px] w-full max-w-[1259px] inset-0 z-0">
+        <Image
+          src="/stars1.png"
+          alt="background"
+          fill
+          className="object-contain"
+          priority
         />
       </div>
 
@@ -40,12 +44,12 @@ export default function Homepage() {
       </div>
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full">
-        <div className="flex justify-between items-center max-w-[1200px] mx-auto px-4 mt-6">
+        <div className="flex justify-between items-center max-w-[1200px] mx-auto px-4 mt-[50px]">
           <Image src="/Logo.png" width={54} height={40} alt="logo" />
 
-          <div className="hidden md:flex gap-8 text-white [&_span]:cursor-pointer text-[18px] lg:text-[22px]">
+          <div className="hidden md:flex gap-8 font-sans text-white [&_span]:cursor-pointer text-[18px] lg:text-[22px]">
             <span
-              className="font-bold border-b-2 border-transparent hover:border-[#FF541F]
+              className="font-sans font-bold border-b-2 border-transparent hover:border-[#FF541F]
  rounded-[1.5px] "
             >
               Home
@@ -69,14 +73,14 @@ export default function Homepage() {
           </button>
 
           {open && (
-            <div className="absolute top-[70px] left-0 w-[50%] bg-black flex flex-col items-center gap-6 py-6 text-white text-[18px] md:hidden right-0">
+            <div className="absolute top-[70px] left-0 max-w-[50%] bg-black flex flex-col items-center gap-6 py-6 text-white text-[18px] md:hidden right-0">
               <span className="font-bold">Home</span>
               <span>Services</span>
               <span>Contact us</span>
               <span>About us</span>
               <span
                 className="bg-[#FF541F] rounded-[10px] px-4 py-2
-            text-white font-bold text-[18px]"
+            text-white font-bold font-sans text-[18px]"
               >
                 Login
               </span>
@@ -84,7 +88,7 @@ export default function Homepage() {
           )}
 
           <button
-            className="hidden md:block bg-[#FF541F] rounded-[10px] px-4 py-2
+            className="hidden md:block max-w-[120px] w-full bg-[#FF541F] rounded-[10px] px-[35px] py-[15px]
             text-white font-bold text-[18px]"
           >
             Login
@@ -109,7 +113,7 @@ export default function Homepage() {
           </div>
 
           <h1
-            className="font-bold text-white leading-tight
+            className="font-bold text-white leading-tight font-sans
             text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px]"
           >
             Automate <span className="text-[#FF541F]">Intelligence</span>.<br />
@@ -119,24 +123,24 @@ export default function Homepage() {
           <p
             className="max-w-[680px] mx-auto mt-4
             text-[16px] sm:text-[18px] md:text-[22px]
-            text-[#FFFFFFB2]"
+            text-[#FFFFFFB2] font-sans"
           >
             Our AI-powered SaaS platform empowers businesses to streamline
             operations, automate repetitive tasks, and make smarter, data-driven
             decisions—all from one intuitive dashboard.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6 font-sans">
             <button
-              className="bg-[#FF541F] rounded-[10px]
-              px-6 py-3 text-white font-bold text-[18px]"
+              className="bg-[#FF541F] rounded-[10px] max-w-[178px] w-full
+              px-[35px] py-[15px] text-white font-bold text-[18px]"
             >
               Get Started
             </button>
 
             <button
-              className="border border-[#FCFCFC3B] rounded-[10px]
-              px-6 py-3 text-white text-[18px]"
+              className="border border-[#FCFCFC3B] rounded-[10px] max-w-[172px] w-full
+              px-[35px] py-[15px] text-white text-[18px]"
             >
               See Details
             </button>
@@ -144,12 +148,12 @@ export default function Homepage() {
         </div>
 
         <div
-          className="mt-16  border-[#FFFFFF1A]
-          bg-gradient-to-b from-transparent to-black"
+          className="mt-16 w-full border-y  border-[#FFFFFF1A]
+          bg-gradient-to-b from-[#00000000] to-[#000000]"
         >
           <div
             className=" w-full mx-auto py-10 px-4
-            flex flex-col md:flex-row justify-around items-center gap-8"
+            flex flex-col md:flex-row justify-around items-center gap-8 font-sans"
           >
             <div className="text-center mx-auto">
               <p className="text-[#FF541F] text-[20px]">Clients</p>
