@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 const skModernist = localFont({
   src: [
     {
-      path: "../public/fonts/SK-Modernist-Regular.otf",
+      path: "./fonts/fonts/SK-Modernist-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/SK-Modernist-Bold.otf",
+      path: "/fonts/fonts/SK-Modernist-Bold.otf",
       weight: "700",
       style: "bold",
     },
