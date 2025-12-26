@@ -78,7 +78,11 @@ export default function Pricing() {
           {/* PRO (Highlighted) */}
           <div className="p-[3px] rounded-[20px] bg-gradient-to-b from-[#FF7044] to-[#641800]">
             <PricingCard
-              title={<span className="text-[#FF541F] font-bold text-[30px]">Pro</span>}
+              title={
+                <span className="text-[#FF541F] font-bold text-[30px]">
+                  Pro
+                </span>
+              }
               price="$17"
               styles="rounded-[20px] bg-[#1B1B1C] h-[533px] lg:h-[661px]"
               badge="-20%"
@@ -93,6 +97,7 @@ export default function Pricing() {
                 "Developer Tools",
               ]}
               tick="/tick2.png"
+              btn_margin="mt-0 lg:mt-20"
             />
           </div>
 
@@ -116,12 +121,20 @@ export default function Pricing() {
   );
 }
 
-
-function PricingCard({ title, price, desc, features, tick, badge, styles }) {
+function PricingCard({
+  title,
+  price,
+  desc,
+  features,
+  tick,
+  badge,
+  styles,
+  btn_margin,
+}) {
   return (
     <div
       className={`
-        p-6 flex flex-col gap-8
+        p-6 flex flex-col gap-8 h-auto
         ${styles}
       `}
     >
@@ -166,14 +179,14 @@ function PricingCard({ title, price, desc, features, tick, badge, styles }) {
       </div>
 
       {/* CTA */}
-      <div className="mx-auto relative inline-flex mt-12">
+      <div className={`mx-auto relative inline-flex mt-0 ${btn_margin}`}>
         {/* GLOW */}
         <div
           className="
       absolute inset-0
       rounded-[14px]
       bg-[#FF3D00]
-      blur-[28px]
+      blur-[18px]
       opacity-70
       pointer-events-none
     "

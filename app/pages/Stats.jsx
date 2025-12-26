@@ -3,16 +3,16 @@ import React from "react";
 
 export default function Stats() {
   return (
-    <section className="relative w-full bg-[#010101] px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative w-full px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src="/dots.png"
           alt="dots background"
           fill
           className="object-cover opacity-50"
         />
-      </div>
+      </div> */}
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-[1245px] mx-auto pt-16 lg:pt-24">
@@ -52,29 +52,37 @@ export default function Stats() {
               title: "Year of establishment",
               desc: "More than 10 years in the field",
               mt: "lg:mt-[-50px]",
+              img: "/photo11.png",
+              img_pad: "mt-0",
             },
             {
               number: "304",
               title: "Projects are launched",
               desc: "A lot of projects are done",
               mt: "lg:mt-[120px]",
+              img: "/images.png",
+              img_pad: "mt-[10px]",
             },
             {
               number: "189",
               title: "Clients are satisfied",
               desc: "These people love us",
               mt: "lg:mt-[-50px]",
+              img: "/photo11.png",
+              img_pad: "mt-0",
             },
             {
               number: "12",
               title: "Projects in work",
               desc: "What we do right now",
               mt: "lg:mt-[120px]",
+              img: "/images.png",
+              img_pad: "mt-[10px]",
             },
           ].map((item, i) => (
             <div
               key={i}
-              className={`flex flex-col gap-3 items-center text-center ${item.mt}`}
+              className={`flex flex-col gap-3 items-start text-center ${item.mt}`}
             >
               <h2 className="text-white font-bold text-5xl sm:text-6xl">
                 {item.number}
@@ -88,11 +96,11 @@ export default function Stats() {
               </div>
 
               <Image
-                src="/photo11.png"
+                src={item.img}
                 alt="decor"
                 width={290}
                 height={91}
-                className="w-full max-w-[290px]"
+                className={item.img_pad}
               />
             </div>
           ))}

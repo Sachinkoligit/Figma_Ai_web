@@ -4,14 +4,14 @@ import React from "react";
 export default function Features() {
   return (
     <div className="bg-[#010101] w-full py-12 font-sans">
-      <div className="max-w-[1200px] mx-auto w-full">
+      <div className="max-w-[1200px] mx-auto w-full px-4">
         {/* ================= HEADER ================= */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           {/* LEFT CONTENT */}
-          <div className="max-w-[690px] w-full flex flex-col gap-3">
+          <div className=" max-w-[680px] w-full flex flex-col justify-center items-center gap-3">
             {/* H1 */}
             <h1
-              className="
+              className="text-center md:text-left
         order-1
         text-white font-normal leading-tight
         text-[36px] max-w-[680px] w-full sm:text-[44px] md:text-[54px] font-sans lg:text-[64px]
@@ -69,7 +69,7 @@ export default function Features() {
           <div className="flex flex-col lg:flex-row gap-6">
             <div
               className="w-full lg:max-w-[468px] bg-[#272829B2]
-              bg-gradient-to-br from-[#00000000] to-[#FF3C00]/30
+              bg-gradient-to-br from-[#272829B2] via-[#00000000] to-[#FF3C00]/30
               rounded-[20px] p-5"
             >
               <div className="flex justify-between items-start gap-4">
@@ -151,7 +151,7 @@ export default function Features() {
             {/* CARD 4 */}
             <div
               className="w-full lg:max-w-[468px] bg-[#272829B2]
-              bg-gradient-to-br from-transparent to-[#FF3C00]/30
+              bg-gradient-to-br from-[#272829B2] via-[#00000000] to-[#FF3C00]/30
               rounded-[20px] p-5"
             >
               <div className="flex justify-between items-start">

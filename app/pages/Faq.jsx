@@ -11,8 +11,8 @@ export default function Faq() {
   sm:w-[120px] sm:h-[200px]
   md:w-[180px] md:h-[300px]
   top-0 left-0
-  translate-y-16 sm:translate-y-24 md:translate-y-32
-  -translate-x-6 sm:-translate-x-12 md:-translate-x-22
+  translate-y-16 sm:translate-y-24 md:translate-y-10
+  -translate-x-6 sm:-translate-x-12 md:-translate-x-12
 "
       >
         <Image
@@ -30,7 +30,7 @@ export default function Faq() {
   sm:w-[180px] sm:h-[340px]
   md:w-[223px] md:h-[426px]
   top-0 right-0
-  translate-y-10 sm:translate-y-16 md:translate-y-20
+  translate-y-10 sm:translate-y-16 md:translate-y-80
   translate-x-4 sm:translate-x-8 md:translate-x-16
 "
       >
@@ -44,7 +44,7 @@ export default function Faq() {
 
       <div
         className="absolute top-0 left-0 w-[40px] h-[130px] sm:w-[180px] sm:h-[200px]
-  md:w-[200px] md:h-[326px] z-0 translate-y-184"
+  md:w-[200px] md:h-[326px] z-0 translate-y-185"
       >
         <Image
           src="/round_rect.png"
@@ -54,7 +54,7 @@ export default function Faq() {
         />
       </div>
 
-      <div className="absolute top-0 left-0 w-[940px] h-[980px] z-0 right-0 translate-x-200 md:translate-y-100">
+      <div className="absolute top-[644px] right-0 w-[940px] h-[983px] z-0 translate-x-[644px] md:translate-y-[100]">
         <Image
           src="/ellipse.png"
           alt="background"
@@ -63,16 +63,16 @@ export default function Faq() {
         />
       </div>
 
-      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-150 translate-y-100 z-0 right-0">
+      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-120 translate-y-130 z-0 right-0">
         <Image src="/line.png" alt="background" fill className="object-cover" />
       </div>
 
-      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-190 translate-y-100 z-0 right-0">
+      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-110 translate-y-150 z-0 right-0">
         <Image src="/line.png" alt="background" fill className="object-cover" />
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[891px] w-full mx-auto flex lg:pb-30 flex-col gap-[20px] md:gap-[50px] lg:gap-[76px]">
+      <div className="relative z-10 max-w-[891px] w-full mx-auto flex pb-10 md:pb-30 flex-col gap-[20px] md:gap-[50px] lg:gap-[76px]">
         <div className="max-w-[830px] w-full mx-auto text-center">
           <h1 className="max-w-[555px] mx-auto font-bold text-4xl md:text-[64px] text-white">
             Frequently Asked Questions
@@ -111,28 +111,28 @@ export default function Faq() {
         </div>
       </div>
 
-      <div className="relative max-w-[1180px] border rounded-[50px] border-[#ffffff30] mx-auto px-[23px] md:px-[181px] py-[56px] overflow-hidden">
+      <div className="relative max-w-[500px] md:max-w-[980px] lg:max-w-[1120px] w-full pb-[56px] border rounded-[50px] border-[#ffffff30] mx-auto px-[23px] md:px-[181px]  overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/frame1.png"
-            alt="background"
-            fill
-            className="object-contain"
-          />
-        </div>
 
         <div className="absolute inset-0 z-0">
           <Image
             src="/cross.png"
             alt="background"
             fill
-            className="object-contain"
+            className="object-contain w-full"
           />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full flex flex-col gap-[30px] text-center">
+        <div className="relative z-10 w-full flex flex-col pt-[56px] gap-[30px] text-center">
+          <div className="absolute top-0 inset-0 z-0">
+            <Image
+              src="/frame1.png"
+              alt="background"
+              fill
+              className="object-cover object-top blur-2xl"
+            />
+          </div>
           <span className="text-4xl md:text-[64px] font-bold text-white">
             Ready to Design Smarter?
           </span>
@@ -204,21 +204,36 @@ export default function Faq() {
             <h1 className="text-[18px] text-[#FFFFFF]">
               © 2024 All Right Reserved.
             </h1>
-            <div className="max-w-[145px] flex justify-between items-center">
-              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
-                <Image src="/fb.png" width={13} height={13} alt="facebook" />
+            <div className="max-w-[145px] w-full flex justify-between items-center">
+              <div className="h-[30.54px] w-[30.54px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+                <Image
+                  src="/fb.png"
+                  width={8.53}
+                  height={13.9}
+                  alt="facebook"
+                />
               </div>
-              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
-                <Image src="/git.png" width={18} height={18} alt="facebook" />
+              <div className="h-[30.54px] w-[30.54px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+                <Image
+                  src="/git.png"
+                  width={17.06}
+                  height={16.3}
+                  alt="facebook"
+                />
               </div>
-              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
-                <Image src="/twt.png" width={18} height={18} alt="facebook" />
+              <div className="h-[30.54px] w-[30.54px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+                <Image
+                  src="/twt.png"
+                  width={13.97}
+                  height={12.41}
+                  alt="facebook"
+                />
               </div>
-              <div className="h-[30px] w-[30px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
+              <div className="h-[30.54px] w-[30.54px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
                 <Image
                   src="/google.png"
-                  width={18}
-                  height={18}
+                  width={15.51}
+                  height={15.53}
                   alt="facebook"
                 />
               </div>
