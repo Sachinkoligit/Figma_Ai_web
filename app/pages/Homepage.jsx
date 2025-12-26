@@ -12,21 +12,36 @@ export default function Homepage() {
   const [open, setOpen] = useState(false);
   return (
     <div className="w-full mx-auto relative font-sans">
-      <div
-        className="
-    relative flex w-full
-    shadow-[0_140px_200px_#010101]
-  "
-      >
+      <div className="relative flex w-full">
+        {/* Left Image */}
         <div
-          className="w-full min-h-[60vh] lg:min-h-[755px]
-    bg-[url('/left.png')] bg-cover bg-center bg-no-repeat"
-        />
+          className="relative flex-1 w-170 min-h-249
+    sm:w-230 sm:min-h-150
+    md:w-305.75 md:min-h-238.75"
+        >
+          <Image
+            src="/left.png"
+            alt="Left background"
+            fill
+            priority
+            className="object-cover blur-[2px]"
+          />
+        </div>
 
+        {/* Right Image */}
         <div
-          className="w-full min-h-[60vh] lg:min-h-[755px]
-    bg-[url('/right.png')] bg-cover bg-center bg-no-repeat"
-        />
+          className="relative w-170 min-h-249 flex-1
+    sm:w-230 sm:min-h-150
+    md:w-305.75 md:min-h-480.26"
+        >
+          <Image
+            src="/right.png"
+            alt="Right background"
+            fill
+            priority
+            className="object-cover blur-[2px]"
+          />
+        </div>
       </div>
 
       <div className="absolute top-[-16px]  h-[812px] w-full max-w-[1259px] inset-0 z-0">
@@ -40,26 +55,26 @@ export default function Homepage() {
       </div>
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full">
-        <div className="flex justify-between items-center max-w-[1200px] mx-auto px-4 mt-[50px]">
+        <header className="flex justify-between items-center max-w-300 mx-auto px-4 mt-12.5">
           <Image src="/Logo.png" width={54} height={40} alt="logo" />
 
-          <div className="hidden md:flex justify-between items-center max-w-[540px] w-full font-sans text-white [&_span]:cursor-pointer text-[18px] lg:text-[22px]">
-            <span
+          <nav className="hidden md:flex justify-between items-center max-w-135 w-full font-sans text-white [&_span]:cursor-pointer text-[18px] lg:text-[22px]">
+            <a
               className="font-sans font-bold border-b-2 border-transparent hover:border-[#FF541F]
  rounded-[1.5px] "
             >
               Home
-            </span>
-            <span className="border-b-2 border-transparent hover:border-[#FF541F]">
+            </a>
+            <a className="border-b-2 border-transparent hover:border-[#FF541F]">
               Services
-            </span>
-            <span className="border-b-2 border-transparent hover:border-[#FF541F]">
+            </a>
+            <a className="border-b-2 border-transparent hover:border-[#FF541F]">
               Contact us
-            </span>
-            <span className="border-b-2 border-transparent hover:border-[#FF541F]">
+            </a>
+            <a className="border-b-2 border-transparent hover:border-[#FF541F]">
               About us
-            </span>
-          </div>
+            </a>
+          </nav>
 
           <button
             className="md:hidden text-white"
@@ -70,16 +85,16 @@ export default function Homepage() {
 
           {open && (
             <div className="absolute top-[70px] left-0 max-w-[50%] bg-black flex flex-col items-center gap-6 py-6 text-white text-[18px] md:hidden right-0">
-              <span className="font-bold">Home</span>
-              <span>Services</span>
-              <span>Contact us</span>
-              <span>About us</span>
-              <span
+              <a className="font-bold">Home</a>
+              <a>Services</a>
+              <a>Contact us</a>
+              <a>About us</a>
+              <button
                 className="bg-[#FF541F] rounded-[10px] px-4 py-2
             text-white font-bold font-sans text-[18px]"
               >
                 Login
-              </span>
+              </button>
             </div>
           )}
 
@@ -91,7 +106,7 @@ export default function Homepage() {
               Login
             </h1>
           </button>
-        </div>
+        </header>
 
         <div className="max-w-[1000px] mx-auto mt-16 px-4 text-center">
           <div className="flex justify-center mb-6">
@@ -156,17 +171,17 @@ export default function Homepage() {
             <div className="w-full h-auto flex flex-col md:flex-row justify-around items-center gap-8 font-sans">
               <div className="text-center mx-auto">
                 <p className="text-[#FF541F] text-[20px]">Clients</p>
-                <p className="text-white font-bold text-[36px]">120K+</p>
+                <h2 className="text-white font-bold text-[36px]">120K+</h2>
               </div>
 
               <div className="text-center md:border-x md:px-[100px] lg:px-[200px] mx-auto border-[#FFFFFF1A]">
                 <p className="text-[#FF541F] text-[20px]">Projects</p>
-                <p className="text-white font-bold text-[36px]">150+</p>
+                <h2 className="text-white font-bold text-[36px]">150+</h2>
               </div>
 
               <div className="text-center mx-auto ">
                 <p className="text-[#FF541F] text-[20px]">5-Star Reviews</p>
-                <p className="text-white font-bold text-[36px]">32K+</p>
+                <h2 className="text-white font-bold text-[36px]">32K+</h2>
               </div>
             </div>
           </div>

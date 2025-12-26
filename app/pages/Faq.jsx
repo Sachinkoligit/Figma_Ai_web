@@ -1,15 +1,17 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Faq() {
+  const [openIndex,setOpenIndex]=useState(null);
   return (
-    <div className="relative w-full bg-[#010101] pt-[100px] md:px-0 overflow-hidden">
+    <section className="relative w-full bg-[#010101] pt-25 md:px-0 overflow-hidden">
       {/* BACKGROUND RECT */}
       <div
         className="
   absolute z-0
-  w-[100px] h-[150px]
-  sm:w-[120px] sm:h-[200px]
-  md:w-[180px] md:h-[300px]
+  w-25 h-37.5
+  sm:w-30 sm:h-50
+  md:w-45 md:h-75
   top-0 left-0
   translate-y-16 sm:translate-y-24 md:translate-y-10
   -translate-x-6 sm:-translate-x-12 md:-translate-x-12
@@ -43,8 +45,8 @@ export default function Faq() {
       </div>
 
       <div
-        className="absolute top-0 left-0 w-[40px] h-[130px] sm:w-[180px] sm:h-[200px]
-  md:w-[200px] md:h-[326px] z-0 translate-y-185"
+        className="absolute top-0 left-0 w-[40px] h-[130px] sm:w-[80px] sm:h-[200px]
+  md:w-[150px] md:h-[326px] z-0 translate-y-185"
       >
         <Image
           src="/round_rect.png"
@@ -74,9 +76,9 @@ export default function Faq() {
       {/* CONTENT */}
       <div className="relative z-10 max-w-[891px] w-full mx-auto flex pb-10 md:pb-30 flex-col gap-[20px] md:gap-[50px] lg:gap-[76px]">
         <div className="max-w-[830px] w-full mx-auto text-center">
-          <h1 className="max-w-[555px] mx-auto font-bold text-4xl md:text-[64px] text-white">
+          <h2 className="max-w-[555px] mx-auto font-bold text-4xl md:text-[64px] text-white">
             Frequently Asked Questions
-          </h1>
+          </h2>
           <p className="mt-5 text-[#D9D9D9] text-[20px] px-5">
             Got questions? We've got answers. Find everything you need to know
             about using our platform, plans, and features.
@@ -90,22 +92,42 @@ export default function Faq() {
               q: "What is this platform used for?",
               a: "It’s an AI-powered design assistant that helps you generate, customize, and export creative assets in seconds—whether for personal projects, brand work, or commercial use.",
             },
-            { q: "What happens if I hit my free generation limit?" },
-            { q: "Do I need design experience to use it?" },
-            { q: "Can I collaborate with my team?" },
-            { q: "Is it really free to use?" },
+            {
+              q: "What happens if I hit my free generation limit?",
+              a: "It’s an AI-powered design assistant that helps you generate, customize, and export creative assets in seconds—whether for personal projects, brand work, or commercial use.",
+            },
+            {
+              q: "Do I need design experience to use it?",
+              a: "It’s an AI-powered design assistant that helps you generate, customize, and export creative assets in seconds—whether for personal projects, brand work, or commercial use.",
+            },
+            {
+              q: "Can I collaborate with my team?",
+              a: "It’s an AI-powered design assistant that helps you generate, customize, and export creative assets in seconds—whether for personal projects, brand work, or commercial use.",
+            },
+            {
+              q: "Is it really free to use?",
+              a: "It’s an AI-powered design assistant that helps you generate, customize, and export creative assets in seconds—whether for personal projects, brand work, or commercial use.",
+            },
           ].map((item, i) => (
             <div
               key={i}
               className="w-full items-start flex p-[23.85px] border-b border-[#ffffff1a]"
             >
               <div className="flex-1 flex flex-col gap-[10px]">
-                <h1 className="text-[20px] text-white">{item.q}</h1>
-                {item.a && (
+                <p className="text-[20px] text-white">{item.q}</p>
+                {i === openIndex && (
                   <p className="text-[#919191] text-[18px]">{item.a}</p>
                 )}
               </div>
-              <Image src="/arrow-down.png" alt="down" width={30} height={30} />
+              <button onClick={() => setOpenIndex(i === openIndex ? null : i)}>
+                <Image
+                  src="/arrow-down.png"
+                  alt="down"
+                  width={30}
+                  height={30}
+                  className={`${openIndex === i ? "rotate-180" : ""}`}
+                />
+              </button>
             </div>
           ))}
         </div>
@@ -150,13 +172,13 @@ export default function Faq() {
         </div>
       </div>
 
-      <div className="w-full px-[23px] md:px-[101px] py-[66px] mt-[80px] bg-[#FFFFFF0F]">
+      <footer className="w-full px-[23px] md:px-[101px] py-[66px] mt-[80px] bg-[#FFFFFF0F]">
         <div className="max-w-[1237px] w-full mx-auto flex flex-col gap-[50px]">
           <div className="w-full flex md:flex-row flex-col md:gap-0 gap-2 justify-between">
             <div className="md:max-w-[307px] flex flex-col gap-[10px] w-full">
-              <h1 className="max-w-[133px] text-[32px] text-white w-full">
+              <h2 className="max-w-[133px] text-[32px] text-white w-full">
                 About Us
-              </h1>
+              </h2>
               <p className="w-full text-[18px] text-[#BCBCBC]">
                 We’re a team of designers, engineers, and innovators building AI
                 tools that empower anyone to turn imagination into stunning
@@ -165,31 +187,31 @@ export default function Faq() {
             </div>
 
             <div className="md:max-w-[150px] w-full flex flex-col gap-[15px]">
-              <h1 className="text-[24px] font-bold text-[#FF541F]">
+              <h2 className="text-[24px] font-bold text-[#FF541F]">
                 Useful Links
-              </h1>
+              </h2>
               <div className="flex flex-col gap-[8px] text-[#BCBCBC] text-[18px]">
-                <p>About</p>
-                <p>Services</p>
-                <p>Team</p>
-                <p>Prices</p>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Team</a>
+                <a href="#">Prices</a>
               </div>
             </div>
 
             <div className="md:max-w-[155px] w-full flex flex-col gap-[15px]">
-              <h1 className="text-[24px] font-bold text-[#FF541F]">Help</h1>
+              <span className="text-[24px] font-bold text-[#FF541F]">Help</span>
               <div className="flex flex-col gap-[8px] text-[#BCBCBC] text-[18px]">
-                <p>Customer Support</p>
-                <p>Terms & Conditions</p>
-                <p>Privacy Policy</p>
-                <p>Contact us</p>
+                <a href="#">Customer Support</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact us</a>
               </div>
             </div>
 
             <div className="md:max-w-[195px] w-full flex flex-col gap-[15px]">
-              <h1 className="text-[24px] font-bold text-[#FF541F]">
+              <a href="#" className="text-[24px] font-bold text-[#FF541F]">
                 Contact with us
-              </h1>
+              </a>
               <div className="flex flex-col gap-[8px] text-[#BCBCBC] text-[18px]">
                 <p>27 Division St, New York,NY 10002, USA</p>
                 <p>+123 324 2653</p>
@@ -201,9 +223,9 @@ export default function Faq() {
           <div className="w-full p-[0.5px] bg-[#FF541F]"></div>
 
           <div className="w-full flex md:flex-row flex-col gap-2  justify-between items-center">
-            <h1 className="text-[18px] text-[#FFFFFF]">
+            <h2 className="text-[18px] text-[#FFFFFF]">
               © 2024 All Right Reserved.
-            </h1>
+            </h2>
             <div className="max-w-[145px] w-full flex justify-between items-center">
               <div className="h-[30.54px] w-[30.54px] rounded-[95px] border border-[#FF541F] flex justify-center items-center">
                 <Image
@@ -240,7 +262,7 @@ export default function Faq() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </footer>
+    </section>
   );
 }

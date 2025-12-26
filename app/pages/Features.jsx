@@ -3,23 +3,23 @@ import React from "react";
 
 export default function Features() {
   return (
-    <div className="bg-[#010101] w-full py-12 font-sans">
-      <div className="max-w-[1200px] mx-auto w-full px-4">
-        {/* ================= HEADER ================= */}
+    <section className="bg-[#010101] w-full py-12 font-sans">
+      <div className="max-w-300 mx-auto w-full px-4">
+        
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          {/* LEFT CONTENT */}
-          <div className=" max-w-[680px] w-full flex flex-col justify-center items-center gap-3">
-            {/* H1 */}
-            <h1
+         
+          <div className=" max-w-170 w-full flex flex-col justify-center items-center gap-3">
+            
+            <h2
               className="text-center md:text-left
         order-1
         text-white font-normal leading-tight
-        text-[36px] max-w-[680px] w-full sm:text-[44px] md:text-[54px] font-sans lg:text-[64px]
+        text-[36px] max-w-170 w-full sm:text-[44px] md:text-[54px] font-sans lg:text-[64px]
       "
             >
               Designed for Designers. <br />
               Powered by <span className="text-[#FF541F]">AI</span>.
-            </h1>
+            </h2>
 
             {/* IMAGE (comes after H1 on mobile) */}
             <div
@@ -176,6 +176,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

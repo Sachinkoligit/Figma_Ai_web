@@ -1,7 +1,8 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Pricing() {
+  const [style,setStyle]=useState(1);
   return (
     <section className="relative w-full bg-[#010101] px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* BACKGROUND IMAGE */}
@@ -19,7 +20,7 @@ export default function Pricing() {
       <div className="relative z-10 max-w-[1200px] mx-auto py-16">
         {/* Heading */}
         <div className="max-w-[780px] mx-auto text-center mb-12">
-          <h1
+          <h2
             className="
               font-bold text-white
               text-3xl sm:text-4xl lg:text-[64px]
@@ -27,7 +28,7 @@ export default function Pricing() {
             "
           >
             Choose the Plan That’s Right for You
-          </h1>
+          </h2>
 
           <p
             className="
@@ -44,10 +45,26 @@ export default function Pricing() {
         {/* Billing Toggle */}
         <div className="flex justify-center mb-12">
           <div className="flex bg-[#FFFFFF1A] rounded-full p-2">
-            <button className="px-6 py-1 rounded-full bg-[#FFFFFF33] text-white text-sm">
+            <button
+              onClick={() => setStyle(1)}
+              className={`px-6 py-1 ${
+                style === 1
+                  ? "rounded-full bg-[#FFFFFF33] text-white"
+                  : "text-[#919191]"
+              }  text-sm`}
+            >
               Monthly
             </button>
-            <button className="px-6 py-1 text-[#919191] text-sm">Yearly</button>
+            <button
+              onClick={() => setStyle(2)}
+              className={`px-6 py-1 ${
+                style === 2
+                  ? "rounded-full bg-[#FFFFFF33] text-white"
+                  : "text-[#919191]"
+              }  text-sm`}
+            >
+              Yearly
+            </button>
           </div>
         </div>
 
@@ -140,11 +157,11 @@ function PricingCard({
     >
       {/* Header */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-white text-lg">{title}</h3>
+        <h2 className="text-white text-lg">{title}</h2>
         <p className="text-[#FFFFFFBF] text-sm">{desc}</p>
 
         <div className="flex items-center gap-3">
-          <h2 className="text-white font-bold text-4xl">{price}</h2>
+          <h3 className="text-white font-bold text-4xl">{price}</h3>
           <span className="text-[#FFFFFFBF] text-sm">/ month</span>
 
           {badge && (

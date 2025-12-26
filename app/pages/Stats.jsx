@@ -4,24 +4,15 @@ import React from "react";
 export default function Stats() {
   return (
     <section className="relative w-full px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* BACKGROUND IMAGE */}
-      {/* <div className="absolute inset-0 z-0">
-        <Image
-          src="/dots.png"
-          alt="dots background"
-          fill
-          className="object-cover opacity-50"
-        />
-      </div> */}
 
-      {/* CONTENT */}
+      
       <div className="relative z-10 max-w-[1245px] mx-auto pt-16 lg:pt-24">
-        {/* Heading */}
+        
         <div className="flex max-w-[910px] w-full justify-between mx-auto">
-          <h1 className="h-[40px] max-w-[37px] w-full text-[16px] text-[#FFFFFF]">
+          <h2 className="h-[40px] max-w-[37px] w-full text-[16px] text-[#FFFFFF]">
             2025
-          </h1>
-          <h1
+          </h2>
+          <p
             className="
               max-w-[850px] text-white font-bold
               text-lg sm:text-xl md:text-2xl lg:text-[28px]
@@ -32,7 +23,7 @@ export default function Stats() {
             large-scale campaigns, our AI-powered platform is built to bring
             your ideas to life—quickly, beautifully, and intelligently. And the
             results? The numbers speak for themselves:
-          </h1>
+          </p>
         </div>
 
         {/* Stats Grid */}
