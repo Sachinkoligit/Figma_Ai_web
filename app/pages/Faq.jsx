@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Faq() {
   return (
-    <div className="relative w-full bg-[#010101] pt-[100px] px-4 md:px-0 overflow-hidden">
+    <div className="relative w-full bg-[#010101] pt-[100px] md:px-0 overflow-hidden">
       {/* BACKGROUND RECT */}
       <div
         className="
@@ -63,11 +63,11 @@ export default function Faq() {
         />
       </div>
 
-      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-120 translate-y-130 z-0 right-0">
+      <div className="absolute right-0 w-[1000px] h-[1000px] translate-x-120 translate-y-190 z-0">
         <Image src="/line.png" alt="background" fill className="object-cover" />
       </div>
 
-      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] translate-x-110 translate-y-150 z-0 right-0">
+      <div className="absolute right-0 w-[1000px] h-[1000px] translate-x-110 translate-y-210 z-0">
         <Image src="/line.png" alt="background" fill className="object-cover" />
       </div>
 

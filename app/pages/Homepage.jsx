@@ -11,7 +11,7 @@ import { Menu, X } from "lucide-react";
 export default function Homepage() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="w-full max-w-[1440px] mx-auto relative font-sans">
+    <div className="w-full mx-auto relative font-sans">
       <div
         className="
     relative flex w-full
@@ -38,15 +38,6 @@ export default function Homepage() {
           priority
         />
       </div>
-
-      {/* <div className="relative w-full min-h-[60vh] lg:min-h-[1000px] bg-black overflow-hidden">
-        <Image
-          src="/dots.png"
-          alt="dots background"
-          fill
-          className="object-cover opacity-50"
-        />
-      </div> */}
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full">
         <div className="flex justify-between items-center max-w-[1200px] mx-auto px-4 mt-[50px]">
